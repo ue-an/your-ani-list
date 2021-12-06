@@ -3,7 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\AniList;
+use App\Models\Anime;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class AniListController extends Controller
 {
@@ -14,7 +17,8 @@ class AniListController extends Controller
      */
     public function index()
     {
-        //
+        $animes = Anime::all();
+        return view('animelists.index', compact('animes'));
     }
 
     /**
@@ -25,6 +29,8 @@ class AniListController extends Controller
     public function create()
     {
         //
+        $titles = Anime::orderBy('title', 'desc')->get();
+        return view('animelists.create', compact('titles'));
     }
 
     /**
@@ -35,7 +41,15 @@ class AniListController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $anilist = new AniList();
+        $anilist->anime_id = $request->anime_id;
+        $anilist->user_id = Auth::user()->id;
+        $anilist->status = $request->status;
+
+        $anilist->save();
+
+        redirect('/animelists')->with('success', 'successfully added to list');
+
     }
 
     /**
@@ -55,9 +69,10 @@ class AniListController extends Controller
      * @param  \App\Models\AniList  $aniList
      * @return \Illuminate\Http\Response
      */
-    public function edit(AniList $aniList)
+    public function edit(Anime $anime)
     {
-        //
+        $anime = Anime::find($anime->id);
+        return view('animelists.edit', compact('anime'));
     }
 
     /**
@@ -81,5 +96,22 @@ class AniListController extends Controller
     public function destroy(AniList $aniList)
     {
         //
+    }
+
+    public function watching(){
+        //
+        $anilists = DB::table('ani_lists')->public('title');
+        return view('animelists.watching', compact('anilists'));
+    }
+
+    public function completed(){
+        //
+        $animes = AniList::all();
+        return view('animelists.completed');
+    }
+
+    public function planwatch(){
+        //
+        return view('animelists.planwatch');
     }
 }

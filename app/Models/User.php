@@ -21,6 +21,7 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'role',
     ];
 
     /**
@@ -46,8 +47,12 @@ class User extends Authenticatable
         User::factory()->count(3)->create();
     }
 
-    public function anime()
-    {
-        return $this->hasOne(Anime::class, 'anime_id');
+    // public function anime()
+    // {
+    //     return $this->hasOne(Anime::class, 'anime_id');
+    // }
+
+    public function anilist(){
+        return $this->hasMany(Anilist::class);
     }
 }

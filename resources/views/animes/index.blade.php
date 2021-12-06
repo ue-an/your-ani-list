@@ -1,7 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+@if (Auth::user() != null)
+    @if (Auth::user()->role == "superadmin")
+        <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="card">
@@ -26,9 +28,9 @@
                         <thead>
                             <tr>
                                 {{-- <th scope="col">#</th> --}}
-                                <th scope="col">Title</th>
+                                <th scope="col" style="width: 90px">Title</th>
                                 <th scope="col">Description/ Story Plot</th>
-                                <th scope="col">Genre</th>
+                                <th scope="col" style="width: 90px">Genre</th>
                                 <th scope="col">Year</th>
                                 <th scope="col">Actions</th>
                             </tr>
@@ -39,7 +41,7 @@
                                     {{-- <th scope="row"> {{$anime->id}} </th> --}}
                                     <th scope="row"> {{$anime->title}} </th>
                                     <th scope="row"> {{$anime->description}} </th>
-                                    <th scope="row"> {{$anime->genre}} </th>
+                                    <th scope="row"> {{ ucfirst($anime->genre)}} </th>
                                     <th scope="row"> {{$anime->year}} </th>
                                     <td>
                                         <a href="/animes/{{$anime->id}}/edit" class="btn btn-primary"><i class="fas fa-pencil-alt"></i></a>
@@ -96,4 +98,7 @@
         });
     </script>
 </div>
+    @endif
+@endif
+
 @endsection

@@ -41,10 +41,10 @@
                             <div class="form-group">
                                 <label>Genre</label>
                                 <select name="genre" class="form-select">
-                                    <option value="romcom">Romance/Comedy</option>
+                                    <option value="romance/Comedy">Romance/Comedy</option>
                                     <option value="action">Action</option>
                                     <option value="fantasy">Fantasy</option>
-                                    <option value="slice">Slice of Life</option>
+                                    <option value="slice of Life">Slice of Life</option>
                                     <option value="isekai">Isekai</option>
                                 </select>
                             </div>

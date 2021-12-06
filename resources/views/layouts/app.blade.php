@@ -48,11 +48,41 @@
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav me-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="/animes" >Animes</a>
-                        </li>
-                    </ul>
+
+                        
+                    @if (Auth::user() != null)
+                        @if (Auth::user()->role == "superadmin")
+                        <ul class="navbar-nav me-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="/animes" >Animes</a>
+                            </li>
+                        </ul>
+                        @endif
+                    @endif  
+                    
+                    @if (Auth::user() != null)
+                        @if (Auth::user()->role == "admin")
+                        <ul class="navbar-nav me-auto">
+                            <ul class="navbar-nav me-auto">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/animelists" >All Anime</a>
+                                </li>
+                            </ul>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/animelists-watching" >Watching</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/animelists-completed" >Completed</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/animelists-plan-to-watch" >Plan to Watch</a>
+                            </li>
+                        </ul>
+                        <ul class="navbar-nav me-auto">
+                            
+                        </ul>
+                        @endif
+                    @endif
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ms-auto">

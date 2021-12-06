@@ -48,7 +48,7 @@ class AnimeController extends Controller
         $anime->year = $request->year;
 
         $anime->save();
-        return view('animes.index')->with('success', 'anime successfully added');
+        return redirect('/animes')->with('success', 'anime successfully added');
     }
 
     /**

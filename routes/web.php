@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AniListController;
 use App\Http\Controllers\AnimeController;
 use App\Http\Controllers\UserController;
 use Illuminate\Http\Request;
@@ -61,7 +62,15 @@ Route::get('/users', [UserController::class, 'index'])->middleware('checkUser');
 
 //newly added methods in resource must be placed first (routing order)
 // Route::get('/watchers/names', [WatcherController::class, 'names']);
+
+//Route anime superadmin
 Route::resource('/animes', AnimeController::class);
+
+//Route animelist
+Route::get('/animelists-watching', [AniListController::class, 'watching']);
+Route::get('/animelists-completed', [AniListController::class, 'completed']);
+Route::get('/animelists-plan-to-watch', [AniListController::class, 'planwatch']);
+Route::resource('/animelists', AniListController::class);
 
 Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
