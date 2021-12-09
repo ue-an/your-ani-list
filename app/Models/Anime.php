@@ -10,14 +10,19 @@ class Anime extends Model
     use HasFactory;
 
     protected $fillable = [
+        'anime_id',
         'title',
         'description',
         'genre',
         'year',
     ];
 
-    public function user()
+    public function anilist()
     {
-        return $this->belongsTo(User::class);
+        return $this->hasOne(AniList::class);
     }
+
+    // public function anilist(){
+    //     return $this->belongsTo(AniList::class);
+    // }
 }

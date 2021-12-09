@@ -53,6 +53,10 @@ class User extends Authenticatable
     // }
 
     public function anilist(){
-        return $this->hasMany(Anilist::class);
+        return $this->belongsTo(Anilist::class);
+    }
+
+    public function anilistWithAnime(){
+        return $this->hasMany(Anilist::class)->with('anime');
     }
 }

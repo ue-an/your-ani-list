@@ -8,27 +8,38 @@
              <div class="card-header">Completed
              </div>
              <div class="card-body">
-
-                 {{-- <table class="table table-striped table-bordered dt-responsive" style="width:100%" id="animeList">
+                 <table class="table table-striped table-bordered dt-responsive" style="width:100%" id="animeList">
                      <thead>
                          <tr>
-                             <th scope="col" style="width: 90px">Title</th>
-                             <th scope="col">Description/ Story Plot</th>
-                             <th scope="col" style="width: 90px">Genre</th>
-                             <th scope="col">Year</th>
+                             <th scope="col">Title</th>
+                             <th scope="col">Genre</th>
+                             <th scope="col">Status</th>
+                             <th scope="col" style="width: 20px">Actions</th>
                          </tr>
                      </thead>
                      <tbody>
-                         @foreach ($animes as $anime)
+                         @foreach ($anilists as $anilist)
                              <tr>
-                                 <th scope="row"> {{$anime->title}} </th>
-                                 <th scope="row"> {{$anime->description}} </th>
-                                 <th scope="row"> {{ ucfirst($anime->genre)}} </th>
-                                 <th scope="row"> {{$anime->year}} </th>
+                                 <th scope="row"> {{$anilist->anime->title}} </th>
+                                 <th scope="row"> {{ ucfirst($anilist->anime->genre)}} </th>
+                                 <th scope="row"> {{$anilist->status}} </th>
+                                 <td>
+                                        <a href="/animelists/{{$anilist->anime->id}}" class="btn btn-primary"><i class="fas fa-list"></i></a>
+                                        <br><br>
+                                        <form action="/animelists/{{$anilist->anime->id}}" method="POST">
+                                            @csrf
+                                            {{ method_field('DELETE')}}
+                                            <div class="form-group">
+                                                <button type="submit" class="btn btn-success delete-user">
+                                                    <i class="fas fa-check"></i>
+                                                </button>
+                                            </div>
+                                        </form>
+                                 </td>
                              </tr>
                          @endforeach
                      </tbody>
-                 </table> --}}
+                 </table>
              </div>
          </div>
 

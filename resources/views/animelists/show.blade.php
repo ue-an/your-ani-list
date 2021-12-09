@@ -5,40 +5,28 @@
  <div class="row justify-content-center">
      <div class="col-md-12">
          <div class="card">
-             <div class="card-header">Currently Watching
+             <div class="card-header">Anime Information
              </div>
              <div class="card-body">
-
                  <table class="table table-striped table-bordered dt-responsive" style="width:100%" id="animeList">
                      <thead>
                          <tr>
-                             <th scope="col">Title</th>
-                             <th scope="col">Genre</th>
-                             <th scope="col">Status</th>
-                             <th scope="col" style="width: 20px">Actions</th>
+                          <th scope="col" style="width: 90px">Title</th>
+                          <th scope="col">Description/ Story Plot</th>
+                          <th scope="col" style="width: 90px">Genre</th>
+                          <th scope="col">Year</th>
                          </tr>
                      </thead>
                      <tbody>
-                         @foreach ($anilists as $anilist)
                              <tr>
-                                <th scope="row"> {{$anilist->anime->title}} </th>
-                                 <th scope="row"> {{ ucfirst($anilist->anime->genre)}} </th>
-                                 <th scope="row"> {{$anilist->status}} </th>
-                                 <td>
-                                    <a href="/animelists/{{$anilist->id}}/edit" class="btn btn-primary"><i class="fa fa-list"></i></a>
-                                    <br><br>
-                                    <form method="POST" action="/animelists/{{ $anilist->id }}">
-                                        @csrf
-                                        {{ method_field('DELETE') }}
-                                        <div class="form-group">
-                                            <button type="submit" class="btn btn-success delete-user">
-                                                <i class="fas fa-check"></i>
-                                            </button>
-                                        </div>
-                                    </form>
-                                </td>
+                              {{-- @php
+                                  dd($aniInfos);
+                              @endphp --}}
+                                 <th scope="row"> {{$aniInfos->title}} </th>
+                                 <th scope="row"> {{$aniInfos->anime->description}}</th>
+                                 <th scope="row"> {{ ucfirst($aniInfos->genre)}} </th>
+                                 <th scope="row"> {{$aniInfos->year}}</th>
                              </tr>
-                         @endforeach
                      </tbody>
                  </table>
              </div>

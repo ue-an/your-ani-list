@@ -70,6 +70,8 @@ Route::resource('/animes', AnimeController::class);
 Route::get('/animelists-watching', [AniListController::class, 'watching']);
 Route::get('/animelists-completed', [AniListController::class, 'completed']);
 Route::get('/animelists-plan-to-watch', [AniListController::class, 'planwatch']);
+Route::get('/animelists-all', [AniListController::class, 'all']);
+Route::get('/animelists-remove', [AniListController::class, 'remove']);
 Route::resource('/animelists', AniListController::class);
 
 Auth::routes();

@@ -61,7 +61,7 @@
                             </div>
                             <br>
                             <div class="form-group">
-                             <button type="submit" class="btn btn-primary">Add to List</button>
+                             <button type="submit" class="btn btn-primary">Save</button>
                          </div>
                         </form>
                     </div>

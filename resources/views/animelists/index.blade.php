@@ -29,6 +29,7 @@
                              <th scope="col">Description/ Story Plot</th>
                              <th scope="col" style="width: 90px">Genre</th>
                              <th scope="col">Year</th>
+                             <th>dsd</th>
                          </tr>
                      </thead>
                      <tbody>

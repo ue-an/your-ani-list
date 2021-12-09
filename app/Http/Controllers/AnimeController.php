@@ -98,7 +98,7 @@ class AnimeController extends Controller
      */
     public function destroy(Anime $anime)
     {
-        Anime::find($anime->id)->delete();
+        $anime->delete();
         return redirect()->back()->with('success', 'anime successfully deleted');
     }
 }

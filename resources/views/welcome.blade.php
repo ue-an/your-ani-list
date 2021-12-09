@@ -38,6 +38,10 @@
 
             <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
 
+                <div class="jumbotron">
+                    <h1 class="display-6" style="color: whitesmoke">YOUR ANIME LIST</h1>
+                  </div>
+
                 <div class="mt-8 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">
                     <div class="grid grid-cols-1 md:grid-cols-2">
                         <div class="p-6">
@@ -48,7 +52,7 @@
 
                             <div class="ml-12">
                                 <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    Description 1 here
+                                    Looking for Anime to watch? Your Anime List is a perfect website for you! Browse your all-time favorite animes up to the latest ones here. Collections of animes are added almost every month.
                                 </div>
                             </div>
                         </div>
@@ -61,7 +65,7 @@
 
                             <div class="ml-12">
                                 <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    Laracasts offers thousands of video tutorials on Laravel, PHP, and JavaScript development. Check them out, see for yourself, and massively level up your development skills in the process.
+                                    Your Anime List lets you manage your anime into categories: Watching, Plan to Watch, and Completed as a repository for your lists.
                                 </div>
                             </div>
                         </div>
@@ -69,12 +73,12 @@
                         <div class="p-6 border-t border-gray-200 dark:border-gray-700">
                             <div class="flex items-center">
                                 <img src="https://img.icons8.com/external-kiranshastry-lineal-kiranshastry/30/ffffff/external-edit-interface-kiranshastry-lineal-kiranshastry-1.png"/>
-                                <div class="ml-4 text-lg leading-7 font-semibold"><a href="https://laravel-news.com/" class="underline text-gray-900 dark:text-white">Keep Track of Your Progress</a></div>
+                                <div class="ml-4 text-lg leading-7 font-semibold"><p class="text-gray-900 dark:text-white">Organize Your Animes</p></div>
                             </div>
 
                             <div class="ml-12">
                                 <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    Laravel News is a community driven portal and newsletter aggregating all of the latest and most important news in the Laravel ecosystem, including new package releases and tutorials.
+                                    Never lose track of your anime progress again. Monitoring your lists of anime based on categories we have is the best way.
                                 </div>
                             </div>
                         </div>
@@ -87,7 +91,7 @@
 
                             <div class="ml-12">
                                 <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    Laravel's robust library of first-party tools and libraries, such as <a href="https://forge.laravel.com" class="underline">Forge</a>, <a href="https://vapor.laravel.com" class="underline">Vapor</a>, <a href="https://nova.laravel.com" class="underline">Nova</a>, and <a href="https://envoyer.io" class="underline">Envoyer</a> help you take your projects to the next level. Pair them with powerful open source libraries like <a href="https://laravel.com/docs/billing" class="underline">Cashier</a>, <a href="https://laravel.com/docs/dusk" class="underline">Dusk</a>, <a href="https://laravel.com/docs/broadcasting" class="underline">Echo</a>, <a href="https://laravel.com/docs/horizon" class="underline">Horizon</a>, <a href="https://laravel.com/docs/sanctum" class="underline">Sanctum</a>, <a href="https://laravel.com/docs/telescope" class="underline">Telescope</a>, and more.
+                                    Just new to anime? Dive in right now into vast and beautiful world of anime! Discover countless stories and characters you've never seen. Whether you are new or had been watching anime for quite a time now, Your Anime List is here to assist you on your anime journey.
                                 </div>
                             </div>
                         </div>
