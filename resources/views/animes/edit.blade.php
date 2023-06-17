@@ -29,7 +29,7 @@
                         Add Anime
                     </div>
                     <div class="card-body">
-                        <form action="{{ route('animes.update', $anime) }}" method="POST">
+                        <form action="{{ route('animes.update', $attendee) }}" method="POST">
                             @csrf
                             {{ method_field('PUT') }}
                             <div class="form-group">
