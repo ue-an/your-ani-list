@@ -1,3 +1,21 @@
+A simple anime database and tracking web application using laravel.
+
+Screenshots:
+![alt text](https://github.com/ue-an/your-ani-list/blob/main/screenshots/your-ani-list_home.png?raw=true)
+![alt text](https://github.com/ue-an/your-ani-list/blob/main/screenshots/user_register.png?raw=true)
+![alt text](https://github.com/ue-an/your-ani-list/blob/main/screenshots/user_login.png?raw=true)
+Admin
+![alt text](https://github.com/ue-an/your-ani-list/blob/main/screenshots/admin_add-anime-db.png?raw=true)
+![alt text](https://github.com/ue-an/your-ani-list/blob/main/screenshots/admin_anime-dashboard.png?raw=true)
+
+Client
+![alt text](https://github.com/ue-an/your-ani-list/blob/main/screenshots/user_anime-home.png?raw=true)
+![alt text](https://github.com/ue-an/your-ani-list/blob/main/screenshots/user_add-anim.png?raw=true)
+![alt text](https://github.com/ue-an/your-ani-list/blob/main/screenshots/user_anime-watching.png?raw=true)
+![alt text](https://github.com/ue-an/your-ani-list/blob/main/screenshots/user_anime-completed.png?raw=true)
+![alt text](https://github.com/ue-an/your-ani-list/blob/main/screenshots/user_add-anime-plan.png?raw=true)
+
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
 <p align="center">
