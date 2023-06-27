@@ -104,27 +104,14 @@
                             <img src="https://img.icons8.com/ios/25/ffffff/visit.png"/>
 
                             <a href="https://sites.google.com/view/ani-world/home" class="ml-1 underline">
-                                Check out my AniWorld!
+                                Check out AniWorld!
                             </a>
                             <div style="width: 30px"></div>
-                            <img src="https://img.icons8.com/fluency-systems-regular/30/ffffff/github.png"/>
-
-                            <a href="" class="ml-1 underline">
-                                View My Account
-                            </a>
                         </div>
                     </div>
-
                     <div class="ml-4 text-center text-sm text-gray-500 sm:text-right sm:ml-0">
-                        Web System TEchnologies 2
-                        Final Project
+                        <h5>with Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})</h5>
                     </div>
-                </div>
-                <div class="ml-4 text-center text-sm text-gray-500 sm:text-right sm:ml-0">
-                    <p style="font-weight: 90">Ian Aguinaldo</p>
-                </div>
-                <div class="ml-4 text-center text-sm text-gray-500 sm:text-right sm:ml-0">
-                    <h5>with Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})</h5>
                 </div>
             </div>
         </div>
